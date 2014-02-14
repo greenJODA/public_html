@@ -1,29 +1,24 @@
 <?php
 
 /**
- * This is the model class for table "{{car}}".
+ * This is the model class for table "{{Users}}".
  *
- * The followings are the available columns in table '{{car}}':
- * @property integer $Cod_c
- * @property string $Mark_c
- * @property string $Model_c
- * @property string $Year_c
- * @property string $Nomer_c
- * @property string $Type_c
- * @property string $Custom_c
- * @property string $Text_c
- * @property integer $Articul_c
- * @property double $Price_c
- * @property integer $Image_c
+ * The followings are the available columns in table '{{Users}}':
+ * @property integer $User_id
+ * @property string $UserName
+ * @property string $Password
+ * @property string $Created
+ * @property integer $Role
+ * @property string $Email
  */
-class Car extends CActiveRecord
+class Users extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return '{{car}}';
+		return '{{Users}}';
 	}
 
 	/**
@@ -34,14 +29,13 @@ class Car extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-            array('Mark_c,Model_c,Price_c,Custom_c,Year_c,Articul_c','required'),
-			array('Articul_c, Image_c', 'numerical', 'integerOnly'=>true),
-			array('Price_c', 'numerical'),
-			array('Mark_c, Model_c, Nomer_c, Type_c, Custom_c', 'length', 'max'=>20),
-			array('Year_c, Text_c', 'safe'),
+			array('User_id', 'required'),
+			array('User_id, Role', 'numerical', 'integerOnly'=>true),
+			array('UserName, Password, Email', 'length', 'max'=>255),
+			array('Created', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Cod_c, Mark_c, Model_c, Year_c, Nomer_c, Type_c, Custom_c, Text_c, Articul_c, Price_c, Image_c', 'safe', 'on'=>'search'),
+			array('User_id, UserName, Password, Created, Role, Email', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,17 +56,12 @@ class Car extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'Cod_c' => 'Cod C',
-			'Mark_c' => 'Mark C',
-			'Model_c' => 'Model C',
-			'Year_c' => 'Year C',
-			'Nomer_c' => 'Nomer C',
-			'Type_c' => 'Type C',
-			'Custom_c' => 'Custom C',
-			'Text_c' => 'Text C',
-			'Articul_c' => 'Articul C',
-			'Price_c' => 'Price C',
-			'Image_c' => 'Image C',
+			'User_id' => 'User',
+			'UserName' => 'User Name',
+			'Password' => 'Password',
+			'Created' => 'Created',
+			'Role' => 'Role',
+			'Email' => 'Email',
 		);
 	}
 
@@ -94,17 +83,12 @@ class Car extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('Cod_c',$this->Cod_c);
-		$criteria->compare('Mark_c',$this->Mark_c,true);
-		$criteria->compare('Model_c',$this->Model_c,true);
-		$criteria->compare('Year_c',$this->Year_c,true);
-		$criteria->compare('Nomer_c',$this->Nomer_c,true);
-		$criteria->compare('Type_c',$this->Type_c,true);
-		$criteria->compare('Custom_c',$this->Custom_c,true);
-		$criteria->compare('Text_c',$this->Text_c,true);
-		$criteria->compare('Articul_c',$this->Articul_c);
-		$criteria->compare('Price_c',$this->Price_c);
-		$criteria->compare('Image_c',$this->Image_c);
+		$criteria->compare('User_id',$this->User_id);
+		$criteria->compare('UserName',$this->UserName,true);
+		$criteria->compare('Password',$this->Password,true);
+		$criteria->compare('Created',$this->Created,true);
+		$criteria->compare('Role',$this->Role);
+		$criteria->compare('Email',$this->Email,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -115,7 +99,7 @@ class Car extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Car the static model class
+	 * @return Users the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
