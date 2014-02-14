@@ -42,17 +42,6 @@ class CarController extends Controller
 	}
 
 	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID of the model to be displayed
-	 */
-	public function actionView($id)
-	{
-		$this->render('view',array(
-			'model'=>$this->loadModel($id),
-		));
-	}
-
-	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
@@ -67,7 +56,7 @@ class CarController extends Controller
 		{
 			$model->attributes=$_POST['Car'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Cod_c));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('create',array(
@@ -91,7 +80,7 @@ class CarController extends Controller
 		{
 			$model->attributes=$_POST['Car'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->Cod_c));
+				$this->redirect(array('index'));
 		}
 
 		$this->render('update',array(

@@ -34,6 +34,7 @@ class Car extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
+            array('Marc_c,Model_c,Price_c,Custom_c,Year_c,Articul_c','required'),
 			array('Articul_c, Image_c', 'numerical', 'integerOnly'=>true),
 			array('Price_c', 'numerical'),
 			array('Mark_c, Model_c, Nomer_c, Type_c, Custom_c', 'length', 'max'=>20),
