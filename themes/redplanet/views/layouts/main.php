@@ -1,23 +1,25 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Red Planet</title>
+<title>Магазин</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
 </head>
 <body>
 <div id="header">
 
   <div id="logo"> 
-  <H1> <img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ford.png" width="200" height="100" /> </H1>
+  <H1> <a href="/index.php"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ford.png" width="200" height="100" /> </a></H1>
   </div>
   
   <div id="menu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Главная', 'url'=>array('/site/index')),
+				array('label'=>'Ассортимент', 'url'=>array('/avto/index')),
 				array('label'=>'О нас', 'url'=>array('/site/page', 'view'=>'about')),
 				array('label'=>'Контакты', 'url'=>array('/site/contact')),
 				array('label'=>'Логин', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
@@ -56,7 +58,7 @@
       </div>
     </form>
     <p></p>
-    <h3>Veroeros Etiam</h3>
+   <!-- <h3>Veroeros Etiam</h3>
     <ul>
       <li><a href="http://www.free-css.com/">Sed vel quam nulla</a></li>
       <li><a href="http://www.free-css.com/">Vestibulum pellentesque</a></li>
@@ -72,7 +74,7 @@
       <li><a href="http://www.free-css.com/">Maecenas sed sem</a></li>
       <li><a href="http://www.free-css.com/">Donec pede nisl dolore<br />
         </a></li>
-    </ul>
+    </ul> -->
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>

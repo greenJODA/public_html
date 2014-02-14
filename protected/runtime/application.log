@@ -192,3 +192,73 @@ Stack trace:
 REQUEST_URI=/index.php?r=admin/car/view&id=1
 HTTP_REFERER=http://magaz/index.php?r=admin/car
 ---
+2014/02/14 15:47:26 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Car.title".' in C:\Winginx\home\FUCK\public_html\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('title')
+#1 C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php(9): CActiveRecord->__get('title')
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\web\actions\CInlineAction.php(49): AvtoController->actionIndex()
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('avto/index')
+#8 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\Winginx\home\FUCK\public_html\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=avto/index
+HTTP_REFERER=http://fuck/index.php?r=
+---
+2014/02/14 15:47:45 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Car.title".' in C:\Winginx\home\FUCK\public_html\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('title')
+#1 C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php(9): CActiveRecord->__get('title')
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\web\actions\CInlineAction.php(49): AvtoController->actionIndex()
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('avto/index')
+#8 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\Winginx\home\FUCK\public_html\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=avto/index
+HTTP_REFERER=http://fuck/index.php?r=
+---
+2014/02/14 15:47:47 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "Car.title".' in C:\Winginx\home\FUCK\public_html\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('title')
+#1 C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php(9): CActiveRecord->__get('title')
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\web\actions\CInlineAction.php(49): AvtoController->actionIndex()
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#7 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('avto/index')
+#8 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\Winginx\home\FUCK\public_html\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/index.php?r=avto/index
+HTTP_REFERER=http://fuck/index.php?r=
+---
+2014/02/14 15:49:27 [error] [php] Object of class Car could not be converted to string (C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php:9)
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(286): AvtoController->runAction()
+#1 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(265): AvtoController->runActionWithFilters()
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(282): AvtoController->run()
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\Winginx\home\FUCK\public_html\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=avto/index
+in C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php (9)
+in C:\Winginx\home\FUCK\public_html\index.php (13)
+2014/02/14 15:53:13 [error] [php] Object of class Car could not be converted to string (C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php:8)
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(286): AvtoController->runAction()
+#1 C:\Winginx\home\FUCK\public_html\yii\framework\web\CController.php(265): AvtoController->runActionWithFilters()
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(282): AvtoController->run()
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\Winginx\home\FUCK\public_html\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=avto/index
+in C:\Winginx\home\FUCK\public_html\protected\controllers\AvtoController.php (8)
+in C:\Winginx\home\FUCK\public_html\index.php (13)
