@@ -27,11 +27,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Created'); ?>
-		<?php echo $form->textField($model,'Created',array('size'=>11,'maxlength'=>11)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'Role'); ?>
 		<?php echo $form->textField($model,'Role'); ?>
 	</div>

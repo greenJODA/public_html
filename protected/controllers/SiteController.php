@@ -21,6 +21,29 @@ class SiteController extends Controller
 		);
 	}
 
+     /**
+	 * Creates a new model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 */
+	public function actionRegistration()
+	{
+		$model=new Users;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['Users']))
+		{
+			$model->attributes=$_POST['Users'];
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->User_id));
+		}
+
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
