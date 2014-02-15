@@ -57,7 +57,7 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Text_c'); ?>
-		<?php echo $form->textArea($model,'Text_c',array('rows'=>6, 'cols'=>50)); ?>
+        <?php echo $form->textArea($model,'Text_c'); ?>
 		<?php echo $form->error($model,'Text_c'); ?>
 	</div>
 
@@ -75,7 +75,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Image_c'); ?>
-		<?php echo $form->textField($model,'Image_c'); ?>
+		<?php $this->widget('application.extensions.ckeditor.CKEditor', 
+        array( 
+            'model'=>$model, 
+            'attribute'=>'Image_c', 
+            'language'=>'ru', 
+            'editorTemplate'=>'full', )); 
+        ?>
 		<?php echo $form->error($model,'Image_c'); ?>
 	</div>
 

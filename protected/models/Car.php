@@ -14,7 +14,7 @@
  * @property string $Text_c
  * @property integer $Articul_c
  * @property double $Price_c
- * @property integer $Image_c
+ * @property string $Image_c
  */
 class Car extends CActiveRecord
 {
@@ -35,10 +35,10 @@ class Car extends CActiveRecord
 		// will receive user inputs.
 		return array(
             array('Mark_c,Model_c,Price_c,Custom_c,Year_c,Articul_c','required'),
-			array('Articul_c, Image_c', 'numerical', 'integerOnly'=>true),
+			array('Articul_c', 'numerical', 'integerOnly'=>true),
 			array('Price_c', 'numerical'),
-			array('Mark_c, Model_c, Nomer_c, Type_c, Custom_c', 'length', 'max'=>20),
-			array('Year_c, Text_c', 'safe'),
+			array('Mark_c, Model_c,Nomer_c, Type_c, Custom_c', 'length', 'max'=>20),
+			array('Year_c, Image_c, Text_c', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('Cod_c, Mark_c, Model_c, Year_c, Nomer_c, Type_c, Custom_c, Text_c, Articul_c, Price_c, Image_c', 'safe', 'on'=>'search'),
@@ -104,7 +104,7 @@ class Car extends CActiveRecord
 		$criteria->compare('Text_c',$this->Text_c,true);
 		$criteria->compare('Articul_c',$this->Articul_c);
 		$criteria->compare('Price_c',$this->Price_c);
-		$criteria->compare('Image_c',$this->Image_c);
+		$criteria->compare('Image_c',$this->Image_c,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
