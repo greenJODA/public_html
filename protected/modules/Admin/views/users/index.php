@@ -48,11 +48,7 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
             'value'=>'date("j.m.Y.H:i",$data->Created)',
             'filter'=> false,
         ),
-		'Role'=> array(
-            'name'=>'Role',
-            'value'=>'($data->Role==1)?"User":Admin"',
-            'filter'=>array(1=>"Admin",2=>"User"),
-        ),
+		'Role',
 		'Email',
 		array(
 			'class'=>'CButtonColumn',
