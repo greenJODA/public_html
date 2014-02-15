@@ -1451,3 +1451,15 @@ Stack trace:
 REQUEST_URI=/index.php?r=admin/purchase
 HTTP_REFERER=http://magaz/index.php?r=gii/crud/index
 ---
+2014/02/15 21:07:41 [error] [exception.CException] exception 'CException' with message 'Не определено свойство "CUrlManager.swowScriptName".' in C:\Winginx\home\FUCK\public_html\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\Winginx\home\FUCK\public_html\yii\framework\YiiBase.php(220): CComponent->__set('swowScriptName', false)
+#1 C:\Winginx\home\FUCK\public_html\yii\framework\base\CModule.php(386): YiiBase::createComponent(Array)
+#2 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(522): CModule->getComponent('urlManager')
+#3 C:\Winginx\home\FUCK\public_html\yii\framework\web\CWebApplication.php(140): CApplication->getUrlManager()
+#4 C:\Winginx\home\FUCK\public_html\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\Winginx\home\FUCK\public_html\index.php(13): CApplication->run()
+#6 {main}
+REQUEST_URI=/index.php?r=site/index
+HTTP_REFERER=http://fuck/index.php?r=admin
+---
