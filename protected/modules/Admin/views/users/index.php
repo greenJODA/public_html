@@ -42,9 +42,17 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 	'columns'=>array(
 		'User_id',
 		'UserName',
-		'Password',
-		'Created',
-		'Role',
+		'password',
+		'Created' => array(
+            'name'=>'Created',
+            'value'=>'date("j.m.Y.H:i",$data->Created)',
+            'filter'=> false,
+        ),
+		'Role'=> array(
+            'name'=>'Role',
+            'value'=>'($data->Role==1)?"User":Admin"',
+            'filter'=>array(1=>"Admin",2=>"User"),
+        ),
 		'Email',
 		array(
 			'class'=>'CButtonColumn',

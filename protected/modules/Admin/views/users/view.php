@@ -17,7 +17,7 @@ $this->menu=array(
 	'attributes'=>array(
 		'User_id',
 		'UserName',
-		'Password',
+		'password',
 		'Created',
 		'Role',
 		'Email',

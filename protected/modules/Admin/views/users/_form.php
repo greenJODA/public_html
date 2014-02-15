@@ -32,12 +32,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Password'); ?>
-		<?php echo $form->passwordField($model,'Password',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'Password'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'Role'); ?>
 		<?php echo $form->textField($model,'Role'); ?>
 		<?php echo $form->error($model,'Role'); ?>

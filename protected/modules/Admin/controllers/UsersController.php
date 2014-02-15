@@ -22,7 +22,7 @@ class UsersController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','password','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -45,11 +45,19 @@ class UsersController extends Controller
 	 */
 	public function actionView($id)
 	{
-		$this->render('view',array(
+	   $this->render('view',array(
 			'model'=>$this->loadModel($id),
 		));
 	}
 
+	public function actionPassword($id)
+	{
+        $model=$this->loadModel($id);
+        
+        $model->password = $_POST['password'];
+        $model->save();
+        $this->render('password');
+    }
 
 	/**
 	 * Updates a particular model.
