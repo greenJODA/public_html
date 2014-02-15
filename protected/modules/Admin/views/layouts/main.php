@@ -32,6 +32,7 @@
 				array('label'=>'Home', 'url'=>array('/site/index')),
                 array('label'=>'Table Users', 'url'=>array('/admin/users')),
 				array('label'=>'Table Cars', 'url'=>array('/admin/car')),
+                array('label'=>'Table Purchase', 'url'=>array('/admin/purchase')),
                 array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
