@@ -9,7 +9,7 @@ $this->menu=array(
 push your pass <br />
 <?php
 	echo CHtml::form();
-    echo CHtml::textField('password');
-    echo CHtml::submitButton('Change');
+    echo CHtml::textField('Пароль');
+    echo CHtml::submitButton('Изменить');
     echo CHtml::endForm();
 ?>

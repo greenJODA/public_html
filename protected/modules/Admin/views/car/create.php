@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Car', 'url'=>array('index')),
-	array('label'=>'Manage Car', 'url'=>array('admin')),
+	array('label'=>'Список авто', 'url'=>array('index')),
+	array('label'=>'Изменить', 'url'=>array('admin')),
 );
 ?>
 

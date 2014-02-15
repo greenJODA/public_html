@@ -8,8 +8,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Car', 'url'=>array('index')),
-	array('label'=>'Create Car', 'url'=>array('create')),
+	array('label'=>'Список авто', 'url'=>array('index')),
+	array('label'=>'Создать авто', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "

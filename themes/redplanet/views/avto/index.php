@@ -10,11 +10,17 @@ $this->breadcrumbs=array(
 <p>
 <?php 
 $a = Car::Model()->findBySql('SELECT * FROM {{Car}}');
-echo $a->Mark_c;
+
 echo $a->Model_c;
-echo $a->Mark_c;
-echo $a->Mark_c;
-echo $a->Mark_c;
+echo '<br />';
+//foreach ($a as $one){
+//echo $one->Model_c;
+//echo '<hr />';
+//echo $a->Model_c;
+//echo $a->Mark_c;
+//echo $a->Mark_c;
+//}
+echo $a->Model_c;
  
 ?>
 

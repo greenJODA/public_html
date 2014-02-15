@@ -9,10 +9,10 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'List Car', 'url'=>array('index')),
-	array('label'=>'Create Car', 'url'=>array('create')),
-	array('label'=>'View Car', 'url'=>array('view', 'id'=>$model->Cod_c)),
-	array('label'=>'Manage Car', 'url'=>array('admin')),
+	array('label'=>'Список авто', 'url'=>array('index')),
+	array('label'=>'Создать авто', 'url'=>array('create')),
+	array('label'=>'Показать авто', 'url'=>array('view', 'id'=>$model->Cod_c)),
+	array('label'=>'Изменить', 'url'=>array('admin')),
 );
 ?>
 

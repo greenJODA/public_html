@@ -6,7 +6,7 @@
 $this->menu=array(
 	array('label'=>'List Users', 'url'=>array('index')),
 	array('label'=>'Update Users', 'url'=>array('update', 'id'=>$model->User_id)),
-	array('label'=>'Delete Users', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->User_id),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Delete Users', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->User_id),'confirm'=>'Вы уверенны что хотите удалить?')),
 );
 ?>
 
