@@ -63,16 +63,16 @@ class Car extends CActiveRecord
 	{
 		return array(
 			'Cod_c' => 'Cod C',
-			'Mark_c' => 'Mark C',
-			'Model_c' => 'Model C',
-			'Year_c' => 'Year C',
+			'Mark_c' => 'Марка',
+			'Model_c' => 'Модель',
+			'Year_c' => 'Год выпуска',
 			'Nomer_c' => 'Nomer C',
-			'Type_c' => 'Type C',
+			'Type_c' => 'Тип',
 			'Custom_c' => 'Custom C',
-			'Text_c' => 'Text C',
+			'Text_c' => 'Описание',
 			'Articul_c' => 'Articul C',
-			'Price_c' => 'Price C',
-			'Image_c' => 'Image C',
+			'Price_c' => 'Цена',
+			'Image_c' => 'Фото',
 		);
 	}
 
