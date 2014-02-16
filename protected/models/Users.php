@@ -18,7 +18,9 @@ class Users extends CActiveRecord
     //const ROLE_MODER = 'moderator';
     const ROLE_USER = 'user';
     //const ROLE_BANNED = 'banned';
-	/**
+    public $verifyCode;
+	
+    /**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
@@ -34,12 +36,13 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('User_id', 'required'),
-			array('User_id, Role', 'numerical', 'integerOnly'=>true),
+			array('UserName','password','Role', 'required'),
+			array('Role', 'numerical', 'integerOnly'=>true),
 			array('UserName, password, Email', 'length', 'max'=>255),
 			array('Created', 'length', 'max'=>11),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
+            array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements(), 'on' => 'registration'),
 			array('User_id, UserName, password, Created, Role, Email', 'safe', 'on'=>'search'),
 		);
 	}
@@ -67,6 +70,7 @@ class Users extends CActiveRecord
 			'Created' => 'Created',
 			'Role' => 'Role',
 			'Email' => 'Email',
+            'verifyCode' => 'Verify_Code'
 		);
 	}
 
@@ -101,8 +105,8 @@ class Users extends CActiveRecord
 	}
     public function beforeSave()
 	{
-	   //if ($this->isNewRecord)
-        //$this->Role = 2;
+	   if ($this->isNewRecord)
+        $this->Role = 2;
 	   $this->password = md5($this->password);
 		return parent::beforeSave();
 	}
