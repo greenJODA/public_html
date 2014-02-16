@@ -121,4 +121,17 @@ class Car extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	/*
+	public static function menu(@cod)
+	{
+		$models = self::model()->findAllByAttributes(array('Cod_c=>$cod'));
+		$array = array();
+		
+		//foreach ($models as $one){
+		//$array[] = array('label'=>$one->Cod_c,  'url'=> array('/avto/index/id'.$one->id));
+		//}
+		return $array;
+	}
+	*/
+	
 }

@@ -12,7 +12,7 @@
 <div id="header">
 
   <div id="logo"> 
-  <H1> <a href="/index.php"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ford.png" width="200" height="100" /> </a></H1>
+  <p> <a href="/index.php"><img src="<?php echo Yii::app()->theme->baseUrl; ?>/images/ford.png" width="200" height="100" /> </a></p>
   </div>
   
   <div id="menu">
@@ -34,48 +34,18 @@
 <div id="content">
   <div id="colOne">
     <?php echo $content; ?>
-    <!--
-    <h2>Welcome to Sitename.com!</h2>
-    <p><strong>RedPlanet</strong> is a free template from Free CSS Templates released under a <a href="http://creativecommons.org/licenses/by/2.5/">Creative Commons Attribution 2.5 License</a>. The header image of Mars’ surface is from NASA (slightly edited). You're free to use this template for both commercial or personal use. I only ask that you link back to my site in some way. Enjoy :)</p>
-    <p>Sed vel quam. Vestibulum pellentesque. Morbi sit amet magna ac lacus dapibus interdum. Donec pede nisl, Maecenas sed sem sit amet lectus mattis molestie. Integer quis eros lorem ipsum dolor sit amet.</p>
-    <div class="posted">
-      <p>posted by <a href="http://www.free-css.com/">Someone</a> on January 10, 2007</p>
-      <p class="comments"><a href="http://www.free-css.com/">64 comments</a></p>
-    </div>
-    <h2>Lorem Ipsum Dolor</h2>
-    <p>Sed vel quam. Vestibulum pellentesque. Morbi sit amet magna ac lacus dapibus interdum. Donec pede nisl, Maecenas sed sem sit amet lectus mattis molestie. Integer quis eros lorem ipsum dolor sit amet. Sed vel quam. Vestibulum pellentesque. Morbi sit amet magna ac lacus dapibus interdum. Donec pede nisl, Maecenas sed sem sit amet lectus mattis molestie. Integer quis eros lorem ipsum dolor sit amet.</p>
-    <div class="posted">
-      <p>posted by <a href="http://www.free-css.com/">Someone</a> on January 10, 2007</p>
-      <p class="comments"><a href="http://www.free-css.com/">32 comments</a></p>
-    </div>
-    -->
+    
   </div>
   <div id="colTwo">
     <h3>Search</h3>
-    <form id="form1" method="get" action="http://www.free-css.com/">
+    <form id="form1" method="get" action="">
       <div>
         <input name="textfield1" type="text" id="textfield1" />
         <input name="submit1" type="submit" id="submit1" value="Search" />
       </div>
     </form>
     <p></p>
-   <!-- <h3>Veroeros Etiam</h3>
-    <ul>
-      <li><a href="http://www.free-css.com/">Sed vel quam nulla</a></li>
-      <li><a href="http://www.free-css.com/">Vestibulum pellentesque</a></li>
-      <li><a href="http://www.free-css.com/">Morbi sit amet magna</a></li>
-      <li><a href="http://www.free-css.com/">Lacus dapibus interdum</a></li>
-      <li><a href="http://www.free-css.com/">Donec pede nisl dolore</a></li>
-      <li><a href="http://www.free-css.com/">Maecenas sed sem</a></li>
-    </ul>
-    <h3>Quam Maecenas</h3>
-    <ul>
-      <li><a href="http://www.free-css.com/">Morbi sit amet magna</a></li>
-      <li><a href="http://www.free-css.com/">Lacus dapibus interdum</a></li>
-      <li><a href="http://www.free-css.com/">Maecenas sed sem</a></li>
-      <li><a href="http://www.free-css.com/">Donec pede nisl dolore<br />
-        </a></li>
-    </ul> -->
+   
   </div>
   <div style="clear: both;">&nbsp;</div>
 </div>

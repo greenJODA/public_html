@@ -33,7 +33,7 @@ $this->breadcrumbs=array(
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->passwordField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
-	<p> <a href="//site/registration">Регистрация</a> </p>	
+	<p> <a href="/registration.php">Регистрация</a> </p>	
 	</div>
 
 	<div class="row rememberMe">
