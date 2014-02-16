@@ -24,7 +24,7 @@
 				array('label'=>'Контакты', 'url'=>array('/site/contact')),
                 array('label'=>'Регистрация', 'url'=>array('/site/registration'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Логин', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Админка', 'url'=>array('/site/Admin'), 'visible'=>!Yii::app()->user->isGuest),
+				array('label'=>'Админка', 'url'=>array('/admin/car'), 'visible'=>!Yii::app()->user->isGuest),
 				array('label'=>'Выйти ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

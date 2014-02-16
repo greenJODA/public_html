@@ -1,10 +1,4 @@
-<?php
-/* @var $this AvtoController */
 
-$this->breadcrumbs=array(
-	'Avto',
-);
-?>
 <?php
 
  foreach ($models as $one){
